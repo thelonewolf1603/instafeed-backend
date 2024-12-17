@@ -9,10 +9,12 @@ const commentSchema = new mongoose.Schema({
         type: String
     },
     author: {
-        type: String
+        type: String,
+        required: true
     },
     created: {
         type: Date,
+        required: true,
         default: Date.now()
     }
 
