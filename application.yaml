@@ -1,0 +1,13 @@
+cloud:
+  aws:
+    credentials:
+      access-key: AKIAU6VTTO657DISLR45
+      secret-key: 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
+    region:
+      static: ap-south-1
+    stack:
+      auto: false
+
+application:
+  bucket:
+    name: instafeed-storage

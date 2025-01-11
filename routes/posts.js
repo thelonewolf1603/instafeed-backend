@@ -1,6 +1,7 @@
 var express = require("express");
 var router = express.Router();
 const post = require("../models/post");
+const upload = require('../config/aws-config')
 
 /* GET posts listing. */
 
@@ -41,5 +42,11 @@ router.post("/add", async (req, res) => {
     res.status(500);
   }
 });
+
+// Handle file upload
+router.post('/upload', upload.single('file'), (_req, res) => {
+  res.send('File uploaded successfully!');
+});
+
 
 module.exports = router;
